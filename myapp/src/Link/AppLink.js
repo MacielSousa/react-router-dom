@@ -5,6 +5,7 @@ import Sobre from './Sobre'
 import Header from './Header'
 import NaoEncotrada from './NaoEncotrada';
 import Login from './login';
+import Produto from './Produto';
 
 function AppLink() {
   return (
@@ -14,6 +15,7 @@ function AppLink() {
           <Route path='/' element={<Home />}/>
           <Route path="sobre" element={<Sobre />}/>
           <Route path="login" element={<Login />}/>
+          <Route path="produto/:id" element={<Produto />}/>
           <Route path="*" element={<NaoEncotrada />}/>
         </Routes>
       </BrowserRouter>
