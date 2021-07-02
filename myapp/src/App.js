@@ -1,9 +1,9 @@
 import React from 'react'
-import AppRouter from './Router/AppRouter';
+import AppLink from './Link/AppLink';
 
 function App() {
   return (
-      <AppRouter />
+      <AppLink />
   );
 }
 
