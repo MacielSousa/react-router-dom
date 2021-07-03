@@ -7,6 +7,10 @@ import NaoEncotrada from './NaoEncotrada';
 import Login from './login';
 import Produto from './Produto';
 
+import ProdutoDescricao from './ProdutoDescricao'
+import ProdutoAvaliacao from './PordutoAvaliacao'
+import ProdutoCustomizado from './ProdutoCustomizado';
+
 function AppNestedRoutes() {
   return (
       <BrowserRouter>
@@ -15,7 +19,11 @@ function AppNestedRoutes() {
           <Route path='/' element={<Home />}/>
           <Route path="sobre" element={<Sobre />}/>
           <Route path="login" element={<Login />}/>
-          <Route path="produto/:id/*" element={<Produto />}/>
+          <Route path="produto/:id/*" element={<Produto />}>
+              <Route path="" element={<ProdutoDescricao />}/>
+              <Route path="avaliacao" element={<ProdutoAvaliacao />}/>
+              <Route path="customizado" element={<ProdutoCustomizado />}/>
+          </Route>
           <Route path="*" element={<NaoEncotrada />}/>
         </Routes>
       </BrowserRouter>
