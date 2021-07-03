@@ -1,9 +1,9 @@
 import React from 'react'
-import AppLink from './Link/AppLink';
+import AppNestedRoutes from './NestedRoutes/AppNestedRoutes';
 
 function App() {
   return (
-      <AppLink />
+      <AppNestedRoutes />
   );
 }
 
