@@ -1,10 +1,12 @@
 import React from 'react'
 import AppNestedRoutes from './NestedRoutes/AppNestedRoutes';
+import AppProduto from './DesafioProduto/AppProduto';
 
 function App() {
   return (
-      <AppNestedRoutes />
+      <AppProduto />
   );
+
 }
 
 export default App;

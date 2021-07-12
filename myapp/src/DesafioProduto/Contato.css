@@ -1,0 +1,23 @@
+.contato {
+    display: grid;
+    height: 100%;
+    width: 50vh;
+    margin: 0 30vw;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 8rem;
+}
+
+.contatoInfo {
+        margin: 40px;
+    margin-top: 17px;
+    width: 243px;
+}
+
+img {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 10px;
+}
+

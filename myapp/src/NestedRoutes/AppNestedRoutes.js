@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './Home'
-import Sobre from './Sobre'
-import Header from './Header'
+import Home from './Home';
+import Sobre from './Sobre';
+import Header from './Header';
 import NaoEncotrada from './NaoEncotrada';
 import Login from './login';
 import Produto from './Produto';
