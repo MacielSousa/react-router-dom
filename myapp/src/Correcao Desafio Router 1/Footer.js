@@ -5,7 +5,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 const  Footer = () => {
   return (
     <div>
-        <h1>Footer</h1>
+        <p>Shoope</p>
     </div>
   );
 

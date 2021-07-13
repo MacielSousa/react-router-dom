@@ -5,6 +5,8 @@ import Header from './Correcao Desafio Router 1/Header';
 import Produtos from './Correcao Desafio Router 1/Produtos';
 import './App.css';
 import Contato from './Correcao Desafio Router 1/Contato';
+import Produto from './Correcao Desafio Router 1/Produto';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Produtos />} />
               <Route path="contato" element={<Contato />} />
+              <Route path="produto/:id" element={<Produto />} />
             </Routes>
           </div>
         <Footer />
