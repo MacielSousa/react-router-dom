@@ -1,19 +1,28 @@
 import  React from 'react';
 
-const App = () =>  {
-  const [contar, setContar] = React.useState(0);
-  function aumentar(){
-    setContar(contar + 1);
-  }
-  function diminuir() {
-    setContar(contar - 1);
-  }
 
+
+function  reducer(state, action) {
+  console.log(action);
+
+  switch (action) {
+    case 'aumentar':
+     return state+1;
+    case 'diminuir':
+      return state-1;
+      default:
+        throw new Error();
+  }
+}
+
+const App = () =>  {
+  const [state, dispath] = React.useReducer(reducer, 0);
+  
   return (
     <div>
-      <button onClick={aumentar} style={{marginRight: '10px'}}>+</button>
-      <button onClick={diminuir}>-</button>
-      <p>{contar}</p>
+      <button onClick={() => dispath('aumentar')} style={{marginRight: '10px'}}>+</button>
+      <button onClick={() => dispath('diminuir')}>-</button>
+      <p>{state}</p>
     </div>
   )
 }
