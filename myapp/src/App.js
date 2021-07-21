@@ -1,12 +1,19 @@
 import  React from 'react';
-import Header from './Header';
 
 const App = () =>  {
   const [contar, setContar] = React.useState(0);
+  function aumentar(){
+    setContar(contar + 1);
+  }
+  function diminuir() {
+    setContar(contar - 1);
+  }
+
   return (
     <div>
-      <Header />
-      <button onClick={() => setContar(contar + 1)}>{contar}</button>
+      <button onClick={aumentar} style={{marginRight: '10px'}}>+</button>
+      <button onClick={diminuir}>-</button>
+      <p>{contar}</p>
     </div>
   )
 }
