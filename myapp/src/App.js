@@ -1,6 +1,5 @@
 import  React from 'react';
-
-
+import Exemplo from './Exemplo';
 
 function  reducer(state, action) {
   console.log(action);
@@ -19,11 +18,14 @@ const App = () =>  {
   const [state, dispath] = React.useReducer(reducer, 0);
   
   return (
-    <div>
-      <button onClick={() => dispath('aumentar')} style={{marginRight: '10px'}}>+</button>
-      <button onClick={() => dispath('diminuir')}>-</button>
-      <p>{state}</p>
-    </div>
+    <>
+      <div>
+        <button onClick={() => dispath('aumentar')} style={{marginRight: '10px'}}>+</button>
+        <button onClick={() => dispath('diminuir')}>-</button>
+        <p>{state}</p>
+      </div>
+      <Exemplo />
+    </>
   )
 }
 
