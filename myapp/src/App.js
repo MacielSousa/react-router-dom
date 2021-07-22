@@ -1,30 +1,16 @@
 import  React from 'react';
-import Exemplo from './Exemplo';
-
-function  reducer(state, action) {
-  console.log(action);
-
-  switch (action) {
-    case 'aumentar':
-     return state+1;
-    case 'diminuir':
-      return state-1;
-      default:
-        throw new Error();
-  }
-}
+import Produtos from './Produtos';
 
 const App = () =>  {
-  const [state, dispath] = React.useReducer(reducer, 0);
-  
+
+  const [ativar, setAtivar] = React.useState(true);
+
   return (
     <>
       <div>
-        <button onClick={() => dispath('aumentar')} style={{marginRight: '10px'}}>+</button>
-        <button onClick={() => dispath('diminuir')}>-</button>
-        <p>{state}</p>
+        {ativar && <Produtos titulo="Esses são os Produtos"/> }
+        <button onClick={() => setAtivar(!ativar)} style={{marginTop: '15px'}}>Toggle</button>
       </div>
-      <Exemplo />
     </>
   )
 }
